@@ -8,10 +8,10 @@ require_once '../templates/header.php';
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Add Banners <a href="banner.php" class="btn btn-primary">All Banner</a> </h2>
+                        <h2>Add Service <a href="index.php" class="btn btn-primary">All Servcies</a> </h2>
                     </div>
                     <div class="card-body">
-                        <form action="banner_post.php" method="POST" enctype="multipart/form-data">
+                        <form action="service_post.php" method="POST">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Title" name="title">
                                 <?php 
@@ -26,14 +26,17 @@ require_once '../templates/header.php';
                                 <textarea name="description" placeholder="Description" class="form-control"></textarea>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Button text" name="btn_text">
+                                <select name="box_color" class="form-control">
+                                    <option value="icon-box-pink">Pink</option>
+                                    <option value="icon-box-cyan">Cyan</option>
+                                    <option value="icon-box-green">Green</option>
+                                    <option value="icon-box-blue">Blue</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Button Url" name="btn_url">
+                                <input type="text" class="form-control" placeholder="Icon Name" name="icon_class">
                             </div>
-                            <div class="form-group">
-                                <input type="file" class="form-control"  name="photo">
-                            </div>
+                            
                             <div class="form-group">
                                 <input type="submit" class="form-control btn btn-primary"  name="submit" value="Submit">
                             </div>

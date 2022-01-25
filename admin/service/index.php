@@ -5,7 +5,7 @@ require_once '../templates/header.php';
 
 require_once '../db.php';
 
-$query = "SELECT * FROM banners";
+$query = "SELECT * FROM services";
 
 $result = mysqli_query($conn, $query);
 
@@ -32,16 +32,14 @@ if(mysqli_num_rows($result )> 0 ){
                 ?>
                 <div class="card">
                     <div class="card-header">
-                        <h2>All Banners <a href="insert.php" class="btn btn-primary">Add Banner</a> </h2>
+                        <h2>All Services <a href="insert.php" class="btn btn-primary">Add Service</a> </h2>
                     </div>
                     <div class="card-body">
                         <table class="table">
                             <tr>
                                 <th>Id</th>
-                                <th>photo</th>
                                 <th>title</th>
                                 <th>description</th>
-                                <th>button text</th>
                                 <th>status</th>
                                 <th>action</th>
                             </tr>
@@ -51,10 +49,8 @@ if(mysqli_num_rows($result )> 0 ){
                             ?>
                                 <tr>
                                     <td><?=  $data['id']?></td>
-                                    <td><?=  $data['photo']?></td>
                                     <td><?=  $data['title']?></td>
-                                    <td><?= substr($data['description'], 0, 50).'...' ?></td>
-                                    <td><?=  $data['btn_text']?></td>
+                                    <td><?= substr($data['designation'], 0, 50).'...' ?></td>
                                     <td><?=  $data['status']?></td>
                                     <td>
                                         <a href="#">active/deactive</a>

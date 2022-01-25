@@ -86,6 +86,12 @@ function siteUrl()
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="<?php siteUrl(); ?>/admin/service/index.php">
+                                <span data-feather="file"></span>
+                                Services
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <span data-feather="shopping-cart"></span>
                                 Products
